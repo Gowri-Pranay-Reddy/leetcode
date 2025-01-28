@@ -1,0 +1,57 @@
+1. Set Up Git (first time only)
+Configure your Git username and email globally:
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+2. Clone an Existing Repository
+To clone a remote repository:
+git clone https://github.com/your-username/your-repository.git
+
+3. Navigate to Your Local Repository
+Go to the folder where your Git repository is located:
+"Necessarily everytime"
+cd /c/Users/YourName/Desktop/git/leetcode
+
+4. Initialize Git Repository (if not already initialized)
+To initialize a new Git repository:
+git init
+
+5. Add Changes
+To add a specific file:
+git add filename.txt
+To add all changes:
+git add .
+
+6. Commit Your Changes
+To commit the changes:
+git commit -m "Your commit message"
+
+7. Check the Status of Your Repository
+To see which files have been modified or added:
+git status
+
+8. Set Up Remote Repository
+To add the remote repository (if it's not already linked):
+git remote add origin https://github.com/your-username/your-repository.git
+
+9. Push Changes to GitHub
+To push your local changes to the remote repository:
+git push -u origin main
+
+10. Fetch Changes from the Remote Repository
+To fetch the latest changes from GitHub:
+git fetch
+To pull the latest changes into your local branch:
+git pull
+
+11. Check the Remote URL
+To verify the URL of your remote repository:
+git remote -v
+
+12. Check Your Branch's Upstream
+To see the upstream information for your current branch:
+git branch -vv
+
+13. Checking Your Git Configuration
+To verify your Git configuration:
+git config --list
