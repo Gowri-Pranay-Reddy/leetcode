@@ -1,0 +1,43 @@
+class Solution {
+public:
+    int ispossible(vector<int>&arr,int n,int k,int mid)
+    {
+        int sum=0;
+        int allocation=1;
+        for(int i=0;i<n;i++){
+            if(sum+arr[i]<=mid){
+                sum+=arr[i];
+            }
+            else{
+                allocation++;
+                if(allocation>k||arr[i]>mid){
+                    return false;
+                }
+                sum=arr[i];
+            }
+        }
+        return true;
+    }
+    int splitArray(vector<int>& nums, int k)
+    {
+        int sum=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            sum+=nums[i];
+        }
+        int ans=0, int j=sum, int n=nums.size(), int i=0, int mid=i+(j-i)/2;
+        while(i<=j)
+        {
+            mid=i+(j-i)/2;
+            if(ispossible(nums,n,k,mid))
+            {
+                ans=mid;
+                j=mid-1;
+            }
+            else{
+                i=mid+1;
+            }
+        }
+        return ans;
+    }
+};
