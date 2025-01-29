@@ -7,3 +7,21 @@ public:
         return true;
     }
 };
+
+
+or
+
+
+
+class Solution {
+public:
+    bool canWinNim(int n) {
+        retun n%4==0;
+	}
+}
+
+
+
+
+
+
