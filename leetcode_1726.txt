@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int tupleSameProduct(vector<int>& nums) {
+        vector<int> answers;
+        unordered_map<int, int> productCount;
+        for(int i=0;i<nums.size();i++){
+                for(int j=i+1;j<nums.size();j++){
+                int product=nums[i]*nums[j];
+                answers.push_back(nums[i]*nums[j]);
+                productCount[product]++;
+            }
+        }
+        int count = 0;
+        for(auto& entry : productCount) {
+            int freq = entry.second;
+            if (freq > 1) {
+                count += (freq * (freq - 1)) / 2;
+            }
+        }
+        return count*8;
+    }
+};
